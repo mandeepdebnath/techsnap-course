@@ -110,6 +110,24 @@ nav ul li {
   padding: 0.8rem;
 }
 
+.article-end-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+}
+
+.article-end-btns a {
+  text-decoration: none;
+  color: #1c1d1f;
+  border: 1px solid #1c1d1f;
+  padding: 10px 20px;
+}
+
+.article-end-btns a:hover {
+  background: #d1d7dc;
+}
+
 .lessons .lesson {
   font-size: 15px;
   font-weight: 300;
