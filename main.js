@@ -21,7 +21,14 @@ sectionBtn2.onclick = () => {
   console.log("heyy");
   subMenu2.classList.toggle("show");
 };
-sectionBtn3.onclick = () => {
-  console.log("heyy");
-  subMenu3.classList.toggle("show");
+// sectionBtn3.onclick = () => {
+//   console.log("heyy");
+//   subMenu3.classList.toggle("show");
+// };
+
+let mobileNavBtn = document.querySelector(".mobile-nav-icon");
+let courseNav = document.querySelector(".sidebar-nav-container");
+
+mobileNavBtn.onclick = () => {
+  courseNav.classList.toggle("show-mobile");
 };

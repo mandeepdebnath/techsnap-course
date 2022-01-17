@@ -4,7 +4,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 15px;
 }
 
 .course-container {
@@ -48,13 +52,12 @@
   position: fixed;
   overflow-y: scroll;
   top: 0;
-  width: 300px;
+  width: 25%;
   right: 0;
   background: #fafafa;
   overflow-x: hidden;
   overflow-y: auto;
   border: 1px solid #f7f9fa;
-  padding: 20px;
   transition: 0.5s ease-in-out;
 }
 /* .sidebar.show-sidebar {
@@ -62,9 +65,21 @@
 } */
 
 .sidebar .heading {
-  padding: 10px 0;
-  font-size: 25px;
-  border-bottom: 1px solid rgb(216, 216, 216);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  border: 1px solid #d1d7dc;
+  background-color: #fff;
+}
+.sidebar .heading h5 {
+  font-family: sf pro display, -apple-system, BlinkMacSystemFont, Roboto,
+    segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-size: 20px;
 }
 
 nav ul {
@@ -74,11 +89,47 @@ nav ul {
 }
 
 nav ul li {
-  line-height: 60px;
   display: block;
-  margin-bottom: 20px;
   font-weight: 600;
   position: relative;
+}
+
+.heading span.mobile-nav-icon {
+  display: none;
+}
+
+.course-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+  color: #1c1d1f;
+  padding: 0.8rem;
+}
+
+.sub-menu .lesson {
+  font-size: 15px;
+  font-weight: 300;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.sub-menu .lesson:hover {
+  background: #d1d7dc;
+}
+
+.sub-menu .lesson .lesson-info {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-menu .lesson .lesson-info .time {
+  color: #6a6f73;
 }
 
 nav ul li i {
@@ -86,20 +137,14 @@ nav ul li i {
   margin-right: 8px;
 }
 
-nav ul li .recources {
+.sub-menu .lesson .lesson-info .recources {
   cursor: pointer;
   display: inline-block;
-  padding: 0 5px;
+  padding: 5px 5px 5px 5px;
   font-size: 15px;
   color: #000000;
   background-color: transparent;
   border: 1px solid #1c1d1f;
-}
-
-nav ul ul li {
-  line-height: 30px;
-  margin-bottom: 10px;
-  font-weight: 300;
 }
 
 nav ul ul {
@@ -146,7 +191,7 @@ nav ul .sub-menu input[type="checkbox"]:checked::after {
 }
 
 nav ul a {
-  color: #000;
+  color: #1c1d1f;
   text-decoration: none;
   position: relative;
   display: block;
@@ -165,20 +210,28 @@ nav ul a:hover span {
 }
 
 @media (max-width: 500px) {
+  .heading span.mobile-nav-icon {
+    display: block;
+  }
   .course-container {
     flex-direction: column;
   }
 
   .main-content-container {
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     overflow-y: scroll;
   }
 
   .sidebar-nav-container {
     width: 100%;
-    height: 40vh;
+    height: 55px;
+    position: absolute;
+    bottom: 0;
     overflow-y: scroll;
+  }
+  .sidebar-nav-container.show-mobile {
+    height: 60vh;
   }
 
   .sidebar {
