@@ -235,12 +235,13 @@ nav ul a:hover span {
   .sidebar-nav-container {
     width: 100%;
     height: 55px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     overflow-y: scroll;
   }
   .sidebar-nav-container.show-mobile {
     height: 60vh;
+    position: absolute;
   }
 
   .sidebar {
