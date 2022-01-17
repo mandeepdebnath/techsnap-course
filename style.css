@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.course-container {
+  position: relative;
+  display: flex;
+}
+
+.main-content-container {
+  width: 75%;
+  overflow: hidden;
+}
+.main-content-container article {
+  padding: 40px;
+}
+
+.sidebar-nav-container {
+  /* position: relative; */
+  width: 25%;
+}
+/* .sidebar-nav-container .nav-btn {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: right 0.4s ease;
+  z-index: 100;
+}
+.sidebar-nav-container .nav-btn.click {
+  right: 270px;
+} */
+
+.sidebar-nav-container .nav-btn.click::before {
+  content: "\f061";
+}
+
+.sidebar {
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  width: 300px;
+  right: 0;
+  background: #fafafa;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid #f7f9fa;
+  padding: 20px;
+  transition: 0.5s ease-in-out;
+}
+/* .sidebar.show-sidebar {
+  right: 0;
+} */
+
+.sidebar .heading {
+  padding: 10px 0;
+  font-size: 25px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+
+nav ul li {
+  line-height: 60px;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+}
+
+nav ul li i {
+  margin-left: 4px;
+  margin-right: 8px;
+}
+
+nav ul li .recources {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 15px;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #1c1d1f;
+}
+
+nav ul ul li {
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul .sub-menu.show {
+  display: block;
+}
+
+nav ul .sub-menu {
+  font-size: 1.2rem;
+}
+
+nav ul .sub-menu input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background: #1c1d1f;
+  border-color: #1c1d1f;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+nav ul .sub-menu input[type="checkbox"]::after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+nav ul .sub-menu input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+nav ul a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+
+nav ul a span {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul a:hover span {
+  transform: translateY(-50%) rotate(180deg);
+}
