@@ -11,6 +11,48 @@ body {
   font-size: 15px;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background: #1c1d1f;
+  border-bottom: 1px solid #3e4143;
+  width: 100%;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+.navbar .logo img {
+  height: 60px;
+}
+.navbar .logo {
+  position: relative;
+}
+
+.navbar .course-title {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 30px;
+  border-left: 1px solid #3e4143;
+  padding-left: 30px;
+}
+.course-title span {
+  font-weight: 100;
+}
+
+article h1,
+article h2,
+article p {
+  margin: 10px 0;
+}
+article img {
+  width: 80%;
+}
+
+ul li {
+  list-style: none;
+}
+
 .course-container {
   position: relative;
   display: flex;
@@ -51,7 +93,7 @@ body {
   height: 100%;
   position: fixed;
   overflow-y: scroll;
-  top: 0;
+  top: 63px;
   width: 25%;
   right: 0;
   background: #fafafa;
@@ -139,6 +181,7 @@ nav ul li {
   gap: 15px;
   margin-bottom: 5px;
   cursor: pointer;
+  border-bottom: 1px solid #3e414357;
 }
 
 .lessons .lesson:hover {
@@ -266,6 +309,7 @@ nav ul a:hover span {
   .sidebar {
     position: relative;
     width: 100%;
+    top: 0;
   }
 
   nav ul a span {
