@@ -297,13 +297,13 @@ nav ul a {
   position: relative;
 }
 
-nav ul li a p span.icon {
+/* nav ul li a p span.icon {
   position: absolute;
   top: 50%;
   right: 100px;
   transform: translateY(-50%);
   transition: all 0.2s ease-in-out;
-}
+} */
 
 nav ul a:hover p span.icon {
   transform: translateY(-50%) rotate(180deg);
