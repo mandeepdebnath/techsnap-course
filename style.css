@@ -142,15 +142,40 @@ nav ul li {
 
 .course-lesson {
   display: flex;
+  font-size: 15px;
+}
+
+ul.lessons li.lesson-container {
+  border-bottom: 1px solid #3e414357;
 }
 
 .course-item {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 1.6rem;
+  gap: 5px;
   color: #1c1d1f;
-  padding: 0.8rem;
+  padding: 0.9rem 0.8rem;
+  flex-direction: column;
+}
+.course-item-title {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  width: 100%;
+}
+.course-item-title p {
+  width: 90%;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 1rem;
+}
+.course-item-title .icon {
+  width: 10%;
+}
+.course-item .course-item-info .total-time {
+  color: #6a6f73;
+  font-weight: 200;
+  font-size: 0.85rem;
 }
 
 .article-end-btns {
@@ -183,10 +208,9 @@ nav ul li {
   padding: 0.8rem 1.5rem;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
+  gap: 8px;
   margin-bottom: 5px;
   cursor: pointer;
-  border-bottom: 1px solid #3e414357;
 }
 
 .lessons .lesson:hover {
@@ -200,6 +224,7 @@ nav ul li {
 
 .lessons .lesson .lesson-info {
   margin-left: 25px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -217,7 +242,7 @@ nav ul li i {
   cursor: pointer;
   display: inline-block;
   padding: 5px 5px 5px 5px;
-  font-size: 15px;
+  font-size: 14px;
   color: #000000;
   background-color: #fff;
   border: 1px solid #1c1d1f;
@@ -270,10 +295,9 @@ nav ul a {
   color: #1c1d1f;
   text-decoration: none;
   position: relative;
-  display: block;
 }
 
-nav ul a span {
+nav ul li a p span.icon {
   position: absolute;
   top: 50%;
   right: 100px;
@@ -281,7 +305,7 @@ nav ul a span {
   transition: all 0.2s ease-in-out;
 }
 
-nav ul a:hover span {
+nav ul a:hover p span.icon {
   transform: translateY(-50%) rotate(180deg);
 }
 
