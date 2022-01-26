@@ -83,6 +83,14 @@ let body = document.getElementById("body");
 //   event.stopPropagation(); //Do not bubble up the DOM, do not scroll document.
 // });
 
+let profile = document.querySelector(".profile-avatar");
+let profileDropdown = document.querySelector(".profile-dropdown");
+
+profile.onclick = () => {
+  console.log("profile clickedd");
+  profileDropdown.classList.toggle("show");
+};
+
 let mobileNavBtn = document.querySelector(".mobile-nav-icon");
 let courseNav = document.querySelector(".sidebar-nav-container");
 
