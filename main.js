@@ -3,6 +3,7 @@ let sectionBtn2 = document.querySelector(".section-btn-2");
 let sectionBtn3 = document.querySelector(".section-btn-3");
 let sectionBtn4 = document.querySelector(".section-btn-4");
 let sectionBtn5 = document.querySelector(".section-btn-5");
+
 // let sectionBtn6 = document.querySelector(".section-btn-6");
 // let sectionBtn7 = document.querySelector(".section-btn-7");
 // let sectionBtn8 = document.querySelector(".section-btn-8");
@@ -68,6 +69,19 @@ sectionBtn5.onclick = () => {
 //   console.log("heyy");
 //   subMenu10.classList.toggle("show");
 // };
+
+let sidebar = document.querySelector(".sidebar");
+let body = document.getElementById("body");
+
+// sidebar.addEventListener("scroll", function (e) {
+//   console.log("scrolling");
+//   body.setAttribute("style", "height: 100%");
+//   e.preventDefault();
+// });
+
+// sidebar.scroll(function (event) {
+//   event.stopPropagation(); //Do not bubble up the DOM, do not scroll document.
+// });
 
 let mobileNavBtn = document.querySelector(".mobile-nav-icon");
 let courseNav = document.querySelector(".sidebar-nav-container");
