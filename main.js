@@ -85,10 +85,15 @@ let body = document.getElementById("body");
 
 let profile = document.querySelector(".profile-avatar");
 let profileDropdown = document.querySelector(".profile-dropdown");
+let courseContainer = document.querySelector(".course-container");
 
 profile.onclick = () => {
   console.log("profile clickedd");
   profileDropdown.classList.toggle("show");
+};
+
+courseContainer.onclick = () => {
+  profileDropdown.classList.remove("show");
 };
 
 let mobileNavBtn = document.querySelector(".mobile-nav-icon");

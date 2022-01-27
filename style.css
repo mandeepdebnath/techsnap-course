@@ -111,12 +111,21 @@ ul li {
 }
 
 .article-end-nav {
-  padding: 20px 30px;
   border-bottom: 1px solid #d1d7dc;
   border-top: 1px solid #d1d7dc;
   display: flex;
   gap: 30px;
   font-weight: 700;
+}
+
+.nav-item {
+  padding: 15px 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.article-end-nav-desc {
+  padding: 20px;
+  border-bottom: 1px solid #b3b3b3;
 }
 .article-end-nav span {
   cursor: pointer;
@@ -410,6 +419,20 @@ nav ul a:hover p span.icon {
 
   .main-content-container article {
     padding: 10px;
+  }
+
+  .article-end-nav {
+    gap: 8px;
+    justify-content: center;
+  }
+  .nav-item {
+    padding: 15px 0;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .article-footer {
+    padding: 20px;
   }
   .sidebar-nav-container {
     width: 100%;
