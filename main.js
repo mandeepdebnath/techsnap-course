@@ -96,6 +96,102 @@ courseContainer.onclick = () => {
   profileDropdown.classList.remove("show");
 };
 
+let overviewNav = document.getElementById("overview");
+let overviewDesc = document.querySelector(".overview-desc");
+
+let notesNav = document.getElementById("notes");
+let notesDesc = document.querySelector(".notes-desc");
+
+let qnaNav = document.getElementById("qna");
+let qnaDesc = document.querySelector(".qna-desc");
+
+let assignmentsNav = document.getElementById("assignments");
+let assignmentsDesc = document.querySelector(".assignments-desc");
+
+overviewNav.onclick = () => {
+  if (
+    !overviewDesc.classList.contains("show") &&
+    !overviewNav.classList.contains("active")
+  ) {
+    console.log("nav clicked");
+
+    overviewDesc.classList.add("show");
+    overviewNav.classList.add("active");
+
+    notesDesc.classList.remove("show");
+    notesNav.classList.remove("active");
+
+    qnaDesc.classList.remove("show");
+    qnaNav.classList.remove("active");
+
+    assignmentsDesc.classList.remove("show");
+    assignmentsNav.classList.remove("active");
+  }
+};
+
+notesNav.onclick = () => {
+  if (
+    !notesDesc.classList.contains("show") &&
+    !notesNav.classList.contains("active")
+  ) {
+    console.log("nav clicked");
+
+    notesDesc.classList.add("show");
+    notesNav.classList.add("active");
+
+    overviewDesc.classList.remove("show");
+    overviewNav.classList.remove("active");
+
+    qnaDesc.classList.remove("show");
+    qnaNav.classList.remove("active");
+
+    assignmentsDesc.classList.remove("show");
+    assignmentsNav.classList.remove("active");
+  }
+};
+
+qnaNav.onclick = () => {
+  if (
+    !qnaDesc.classList.contains("show") &&
+    !qnaNav.classList.contains("active")
+  ) {
+    console.log("nav clicked");
+
+    qnaDesc.classList.add("show");
+    qnaNav.classList.add("active");
+
+    notesDesc.classList.remove("show");
+    notesNav.classList.remove("active");
+
+    overviewDesc.classList.remove("show");
+    overviewNav.classList.remove("active");
+
+    assignmentsDesc.classList.remove("show");
+    assignmentsNav.classList.remove("active");
+  }
+};
+
+assignmentsNav.onclick = () => {
+  if (
+    !assignmentsDesc.classList.contains("show") &&
+    !assignmentsNav.classList.contains("active")
+  ) {
+    console.log("nav clicked");
+
+    assignmentsDesc.classList.add("show");
+    assignmentsNav.classList.add("active");
+
+    notesDesc.classList.remove("show");
+    notesNav.classList.remove("active");
+
+    qnaDesc.classList.remove("show");
+    qnaNav.classList.remove("active");
+
+    overviewDesc.classList.remove("show");
+    overviewNav.classList.remove("active");
+  }
+};
+
 let mobileNavBtn = document.querySelector(".mobile-nav-icon");
 let courseNav = document.querySelector(".sidebar-nav-container");
 
