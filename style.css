@@ -343,14 +343,15 @@ ul.lessons li.lesson-container {
   font-size: 14px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 .lessons .lesson .lesson-info .time {
   color: #6a6f73;
+  display: flex;
+  /* margin-right: 20px; */
 }
-.lessons .lesson .lesson-info .time,
 .lessons .lesson .lesson-info .lesson-xp {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 nav ul li i {
@@ -458,7 +459,7 @@ nav ul a:hover p span.icon {
     overflow-y: scroll;
   }
 
-  .main-content-container article {
+  .main-content-container .article-container {
     padding: 10px;
   }
 
