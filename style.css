@@ -34,7 +34,7 @@ body {
 .navbar .nav-right {
   gap: 100px;
 }
-.navbar .nav-right span {
+.navbar .nav-right .progress {
   color: #fff;
   font-weight: 700;
 }
@@ -52,7 +52,7 @@ body {
   border-left: 1px solid #3e4143;
   padding-left: 30px;
 }
-.course-title span {
+.course-title h4 {
   font-weight: 100;
 }
 
@@ -77,7 +77,7 @@ body {
   border: 1px solid black;
   transition: all 0.5s ease;
 }
-.profile-dropdown ul span li {
+.profile-dropdown ul .profile-hover li {
   color: #000;
 }
 .profile-dropdown.show {
@@ -158,7 +158,7 @@ body {
 .nav-item-desc.show {
   display: block;
 }
-.article-end-nav span {
+.article-end-nav .nav-item {
   cursor: pointer;
 }
 
@@ -211,6 +211,7 @@ body {
   overflow-x: hidden;
   border: 1px solid #f7f9fa;
   transition: 0.5s ease-in-out;
+  /* position: relative; */
 }
 /* .sidebar.show-sidebar {
   right: 0;
@@ -223,6 +224,9 @@ body {
   padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   border: 1px solid #d1d7dc;
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 .sidebar .heading h5 {
   font-family: sf pro display, -apple-system, BlinkMacSystemFont, Roboto,
@@ -234,13 +238,14 @@ body {
   font-size: 20px;
 }
 
-nav ul {
+.sidebar .lessons {
   height: 100%;
   width: 100%;
   list-style: none;
+  margin-top: 50px;
 }
 
-nav ul li {
+.sidebar .lessons .lesson-container {
   display: block;
   font-weight: 600;
   position: relative;
@@ -255,7 +260,7 @@ nav ul li {
   font-size: 15px;
 }
 
-ul.lessons li.lesson-container {
+div.lessons div.lesson-container {
   border-bottom: 1px solid #3e414357;
 }
 
@@ -354,7 +359,7 @@ ul.lessons li.lesson-container {
   margin-left: 20px;
 }
 
-nav ul li i {
+.sidebar .lessons .lesson-container i {
   margin-left: 4px;
   margin-right: 8px;
 }
@@ -369,19 +374,19 @@ nav ul li i {
   border: 1px solid #1c1d1f;
 }
 
-nav ul ul {
+.sidebar .lessons .lesson-container .sub-menu {
   display: none;
 }
 
-nav ul .sub-menu.show {
+.sidebar .lessons .lesson-container .sub-menu.show {
   display: block;
 }
 
-nav ul .sub-menu {
+.sidebar .lessons .sub-menu {
   font-size: 1.2rem;
 }
 
-nav ul .lesson input[type="checkbox"] {
+.sidebar .lessons .lesson input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   height: 15px;
@@ -396,7 +401,7 @@ nav ul .lesson input[type="checkbox"] {
   position: relative;
 }
 
-nav ul .lesson input[type="checkbox"]::after {
+.sidebar .lessons .lesson input[type="checkbox"]::after {
   content: "\f00c";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -408,11 +413,11 @@ nav ul .lesson input[type="checkbox"]::after {
   display: none;
 }
 
-nav ul .sub-menu input[type="checkbox"]:checked::after {
+.sidebar .lessons .sub-menu input[type="checkbox"]:checked::after {
   display: block;
 }
 
-nav ul a {
+.sidebar .lessons a {
   color: #1c1d1f;
   text-decoration: none;
   position: relative;
@@ -426,11 +431,11 @@ nav ul a {
   transition: all 0.2s ease-in-out;
 } */
 
-nav ul a:hover p span.icon {
+.sidebar .lessons a:hover p span.icon {
   transform: translateY(-50%) rotate(180deg);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .heading span.mobile-nav-icon {
     display: block;
   }
@@ -481,7 +486,7 @@ nav ul a:hover p span.icon {
     height: 55px;
     position: sticky;
     bottom: 0;
-    overflow-y: scroll;
+    overflow: hidden;
   }
   .sidebar-nav-container.show-mobile {
     height: 60vh;
@@ -493,8 +498,15 @@ nav ul a:hover p span.icon {
     width: 100%;
     top: 0;
   }
+  .sidebar .heading {
+    position: sticky;
+    top: 0;
+  }
+  .sidebar .lessons {
+    margin-top: 0;
+  }
 
-  nav ul a span {
+  .sidebar .lessons a .fas {
     right: 30px;
   }
 }
