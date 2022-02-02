@@ -378,6 +378,9 @@ div.lessons div.lesson-container {
   line-height: 1.1;
   font-size: 20px;
 }
+.course-item-title p:hover {
+  color: #4951f5;
+}
 /* .course-item-title .icon {
   width: 10%;
 } */
